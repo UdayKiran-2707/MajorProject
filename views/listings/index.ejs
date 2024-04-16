@@ -103,7 +103,11 @@
         <% }  %></div>
 
     </div>
-    
+    const allListings = await Listing.find();
+    const { country } = req.query;
+       // Filter listings based on the country
+       const cityListings = country? allListings.filter(listing => listing.country.toLowerCase() === country.toLowerCase(): allListings;
+   res.render('listings/index.ejs', { allListings });
 </body>
 
 <script>
