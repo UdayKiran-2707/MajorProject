@@ -89,7 +89,8 @@
     <a href="/listings/<%= listing._id%>"> 
       <div class="card col listing-card">
         <img class="card-img-top" src="<%= listing.image.url %>" style="height: 20rem" alt="listing-img">
-       <div class="card-img-overlay"></div>
+
+       <!-- <div class="card-img-overlay"></div> -->
         <div class="card-body">
           <p class="card-text">
            <b><%= listing.title %> </b> 
@@ -101,13 +102,6 @@
       </div>
       </a>
         <% }  %></div>
-
-    </div>
-    const allListings = await Listing.find();
-    const { country } = req.query;
-       // Filter listings based on the country
-       const cityListings = country? allListings.filter(listing => listing.country.toLowerCase() === country.toLowerCase(): allListings;
-   res.render('listings/index.ejs', { allListings });
 </body>
 
 <script>
@@ -122,5 +116,5 @@
     info.style.display="none";
    }
   }
-  })
+  });
 </script>
